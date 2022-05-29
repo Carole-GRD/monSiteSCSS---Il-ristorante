@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Réserver une table</title>
+</head>
+<body>
+    <header>
+        <nav id="navForm">
+            <div class="logo">Il ristorante</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="">Le restaurant</a></li>
+                <li><a href="">Les plats</a></li>
+                <li><a href="formulaire.html">Réserver une table</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="formulaire">
+        <div class="carte">
+            <section>
+                
+                <h1>Réserver une table</h1>
+                
+                <div class="separation">
+                    <div class="ligne"></div>
+                    <div class="logo"></div>
+                    <p>Il ristorante</p>
+                    <div class="ligne"></div>
+                </div>
+
+                <div class="phrase">Vous pouvez également nous contacter par téléphone au 012/34.56.78 ou par mail via le formulaire ci-dessous.</div>
+
+                <form action="" id="form">
+                    <article>
+                        <label for="nom">Nom et prénom</label>   
+                        <input type="text" name="nom" id="nom"> 
+                    </article>
+
+                    <article>
+                        <label for="email">Email</label>   
+                        <input type="email" name="email" id="email"> 
+                    </article>
+
+                    <article>
+                        <label for="tel">Téléphone</label>   
+                        <input type="tel" name="tel" id="tel"> 
+                    </article>
+
+                    <article>
+                        <label for="nbr">Nombre de personnes</label>   
+                        <input type="number" name="nbr" id="nbr"> 
+                    </article>
+
+                    <article>
+                        <label for="date">Date</label>   
+                        <input type="text" name="date" id="date"> 
+                    </article>
+
+                    <article>
+                        <label for="midi">Midi</label>   
+                        <input type="checkbox" name="midi" id="midi"> 
+                    </article>
+
+                    <article>
+                        <label for="soir">Soir</label>   
+                        <input type="checkbox" name="soir" id="soir"> 
+                    </article>
+
+                    <article>
+                        <label for="msg">Nom et prénom</label>   
+                        <input type="textarea" name="msg" id="msg"> 
+                    </article>
+                </form>
+
+                <input type="submit" value="Envoyer">
+            </section>
+
+        </div>
+    </main>
+
+    <footer class="footerForm">
+        <p>&copy;2022 - Il ristorante - All rights reserved</p>
+    </footer>
+</body>
+</html>
