@@ -38,46 +38,63 @@
                 <form action="" id="form">
                     <article>
                         <label for="nom">Nom et prénom</label>   
-                        <input type="text" name="nom" id="nom"> 
+                        <input type="text" name="nom" id="nom" placeholder="Nom et prénom"> 
                     </article>
 
                     <article>
                         <label for="email">Email</label>   
-                        <input type="email" name="email" id="email"> 
+                        <input type="email" name="email" id="email" placeholder="Email"> 
                     </article>
 
                     <article>
                         <label for="tel">Téléphone</label>   
-                        <input type="tel" name="tel" id="tel"> 
+                        <input type="tel" name="tel" id="tel" placeholder="Téléphone"> 
                     </article>
 
                     <article>
                         <label for="nbr">Nombre de personnes</label>   
-                        <input type="number" name="nbr" id="nbr"> 
+                        <select name="nbrPersonnes" id="nbrPersonnes"> 
+                            <option value selected="selected" label></option>
+                            <option value="nbrPers1">1 personne</option>
+                            <option value="nbrPers2">2 personnes</option>
+                            <option value="nbrPers3">3 personnes</option>
+                            <option value="nbrPers4">4 personnes</option>
+                            <option value="nbrPers5">5 personnes</option>
+                            <option value="nbrPers6">6 personnes</option>
+                            <option value="nbrPers7">7 personnes</option>
+                            <option value="nbrPers8">8 personnes</option>
+                            <option value="nbrPers9">9 personnes</option>
+                            <option value="nb3Pers10">10 personnes</option>
+                            <option value="nb3Pers11">11 personnes</option>
+                            <option value="nb3Pers12">12 personnes</option>
+                        </select> 
                     </article>
 
                     <article>
                         <label for="date">Date</label>   
-                        <input type="text" name="date" id="date"> 
+                        <input type="date" name="date" id="date"> 
                     </article>
 
                     <article>
-                        <label for="midi">Midi</label>   
-                        <input type="checkbox" name="midi" id="midi"> 
+                        <label for="soir">Midi/Soir</label>  
+                        <select name="temps" id="temps"> 
+                            <option value selected="selected" label></option>
+                            <option value="midi">Midi</option>
+                            <option value="soir">Soir</option>
+                        </select>
                     </article>
 
+                    
                     <article>
-                        <label for="soir">Soir</label>   
-                        <input type="checkbox" name="soir" id="soir"> 
+                        <label for="msg">Message</label>   
+                        <textarea name="msg" id="msg" placeholder="Message"></textarea>
                     </article>
 
-                    <article>
-                        <label for="msg">Nom et prénom</label>   
-                        <input type="textarea" name="msg" id="msg"> 
-                    </article>
+                    
+                    <input type="submit" id="btn" value="Envoyer">
                 </form>
 
-                <input type="submit" value="Envoyer">
+                
             </section>
 
         </div>
