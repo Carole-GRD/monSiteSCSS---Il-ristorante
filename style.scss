@@ -155,33 +155,32 @@ footer{
     width: 100vw;
     
     // pour centrer l'élément enfant : carte
-    position: absolute;
+    // position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .carte{
-        position: absolute;
-        display: flex;
-        justify-content: center;
+        position: relative;
+        // display: block;
+        // justify-content: center;
         // align-items: center;
         padding: 0 15px;
         background-color: $color-alt;
-        overflow: auto; 
+        // overflow: auto; 
         height: 75vh;
         width: 300px;
         border-radius: 10px;
         
-        section{
-            width: 100%;
-            
+        section.fixe{
+            // position: sticky;
             h1{
                 color: rgb(175, 154, 95);
                 font-family: 'Satisfy', cursive;
                 text-align: center;
                 padding: 15px 0 30px;
             }
-    
+
             .separation{
                 display: flex;
                 justify-content: center;
@@ -241,14 +240,21 @@ footer{
                 }
 
             }
-
+            
             .phrase{
+                position: static;
                 color: rgb(175, 154, 95);
                 margin-bottom: 20px;
                 margin-top: -15px;
                 text-align: center;
+                line-height: 1.3rem;
             }
-
+        }
+        
+        section.scroll{
+            height: 40vh;
+            overflow: auto;
+            
             #form{
                 color: rgb(175, 154, 95);
                 padding-left: 10px;
@@ -259,6 +265,7 @@ footer{
                 }
 
                 input{
+                    width: 90%;
                     background-color: rgba(175, 154, 95, .9);
                     outline: none;
                     margin-bottom: 12px;
@@ -267,7 +274,13 @@ footer{
                     border-radius: 5px;
                 }
 
+                #tel, #date{
+                    width: 50%;
+                }
+
                 textarea{
+                    width: 90%;
+                    min-height: 70px;
                     background-color: rgba(175, 154, 95, .9);
                     outline: none;
                     margin-bottom: 20px;
@@ -277,21 +290,28 @@ footer{
                 }
 
                 select{
+                    width: 50%;
                     background-color: rgba(175, 154, 95, .9);
                     outline: none;
+                    border: none;
                     margin-bottom: 12px;
                     padding: 5px;
                     border-radius: 5px;
+                    // NE FONCTIONNE PAS !!
+                    // select:active option{
+                    //     background-color: $color-alt;
+                    // }
                 }
                 
                 #btn{
+                    width: 50%;
+                    font-weight: 600;
                     background-color: rgba(175, 154, 95, .9);
                     padding: 10px 25px;
                     margin-bottom: 30px;
                 }
 
             }
-
         }
 
     }

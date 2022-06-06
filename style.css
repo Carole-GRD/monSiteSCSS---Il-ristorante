@@ -126,44 +126,37 @@ footer {
   background-size: cover;
   height: 100vh;
   width: 100vw;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .formulaire .carte {
-  position: absolute;
-  display: flex;
-  justify-content: center;
+  position: relative;
   padding: 0 15px;
   background-color: #333;
-  overflow: auto;
   height: 75vh;
   width: 300px;
   border-radius: 10px;
 }
-.formulaire .carte section {
-  width: 100%;
-}
-.formulaire .carte section h1 {
+.formulaire .carte section.fixe h1 {
   color: rgb(175, 154, 95);
   font-family: "Satisfy", cursive;
   text-align: center;
   padding: 15px 0 30px;
 }
-.formulaire .carte section .separation {
+.formulaire .carte section.fixe .separation {
   display: flex;
   justify-content: center;
   width: 100%;
 }
-.formulaire .carte section .separation .ligne {
+.formulaire .carte section.fixe .separation .ligne {
   position: relative;
   top: 20px;
   height: 1px;
   width: 90%;
   background-color: #fff;
 }
-.formulaire .carte section .separation .logo {
+.formulaire .carte section.fixe .separation .logo {
   width: 0;
   height: 0;
   border: 60px solid transparent;
@@ -175,7 +168,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-.formulaire .carte section .separation .logo:after {
+.formulaire .carte section.fixe .separation .logo:after {
   width: 0;
   height: 0;
   content: "";
@@ -185,7 +178,7 @@ footer {
   border: 60px solid transparent;
   border-top: 35px solid green;
 }
-.formulaire .carte section .separation p {
+.formulaire .carte section.fixe .separation p {
   position: absolute;
   text-align: center;
   top: 90px;
@@ -194,21 +187,28 @@ footer {
   font-family: "Lato", sans-serif;
   font-size: 0.8rem;
 }
-.formulaire .carte section .phrase {
+.formulaire .carte section.fixe .phrase {
+  position: static;
   color: rgb(175, 154, 95);
   margin-bottom: 20px;
   margin-top: -15px;
   text-align: center;
+  line-height: 1.3rem;
 }
-.formulaire .carte section #form {
+.formulaire .carte section.scroll {
+  height: 40vh;
+  overflow: auto;
+}
+.formulaire .carte section.scroll #form {
   color: rgb(175, 154, 95);
   padding-left: 10px;
 }
-.formulaire .carte section #form label {
+.formulaire .carte section.scroll #form label {
   display: block;
   margin-bottom: 5px;
 }
-.formulaire .carte section #form input {
+.formulaire .carte section.scroll #form input {
+  width: 90%;
   background-color: rgba(175, 154, 95, 0.9);
   outline: none;
   margin-bottom: 12px;
@@ -216,7 +216,12 @@ footer {
   padding: 5px;
   border-radius: 5px;
 }
-.formulaire .carte section #form textarea {
+.formulaire .carte section.scroll #form #tel, .formulaire .carte section.scroll #form #date {
+  width: 50%;
+}
+.formulaire .carte section.scroll #form textarea {
+  width: 90%;
+  min-height: 70px;
   background-color: rgba(175, 154, 95, 0.9);
   outline: none;
   margin-bottom: 20px;
@@ -224,14 +229,18 @@ footer {
   padding: 5px;
   border-radius: 5px;
 }
-.formulaire .carte section #form select {
+.formulaire .carte section.scroll #form select {
+  width: 50%;
   background-color: rgba(175, 154, 95, 0.9);
   outline: none;
+  border: none;
   margin-bottom: 12px;
   padding: 5px;
   border-radius: 5px;
 }
-.formulaire .carte section #form #btn {
+.formulaire .carte section.scroll #form #btn {
+  width: 50%;
+  font-weight: 600;
   background-color: rgba(175, 154, 95, 0.9);
   padding: 10px 25px;
   margin-bottom: 30px;
